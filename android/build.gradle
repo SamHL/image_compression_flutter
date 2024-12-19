@@ -33,18 +33,18 @@ android {
         targetSdkVersion 33
     }
 
-    kotlinOptions {
-        jvmTarget = "17" // Ensure Kotlin targets Java 17
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21 // Use Java 21
+        targetCompatibility JavaVersion.VERSION_21
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17 // Ensure Java targets Java 17
-        targetCompatibility = JavaVersion.VERSION_17
+    kotlinOptions {
+        jvmTarget = "21" // Kotlin targets Java 21
     }
 
     java {
         toolchain {
-            languageVersion.set(JavaLanguageVersion.of(17)) // Use Java 17 toolchain
+            languageVersion.set(JavaLanguageVersion.of(21)) // Use Java 21
         }
     }
 

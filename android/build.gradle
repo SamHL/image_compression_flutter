@@ -33,6 +33,11 @@ android {
         targetSdkVersion 33  // Ensure target SDK is also updated
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17 // Set Java compatibility to 17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }

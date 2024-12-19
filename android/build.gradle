@@ -25,14 +25,16 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "id.co.eyro.image_compression_flutter" // Add namespace here
-    compileSdkVersion 30
+    namespace "id.co.eyro.image_compression_flutter"
+    compileSdkVersion 33  // Updated to a modern version
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33  // Ensure target SDK is also updated
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
-    }
-    defaultConfig {
-        minSdkVersion 16
     }
 }
 

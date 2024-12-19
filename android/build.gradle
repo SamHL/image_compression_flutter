@@ -1,3 +1,8 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
 group 'id.co.eyro.image_compression_flutter'
 version '1.0-SNAPSHOT'
 
@@ -14,16 +19,9 @@ buildscript {
     }
 }
 
-rootProject.allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+repositories {
+    google()
+    mavenCentral()
 }
 
 android {
@@ -36,12 +34,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8 // Use Java 8
+        sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = "1.8" // Kotlin targets Java 8
+        jvmTarget = "1.8"
     }
 
     sourceSets {
